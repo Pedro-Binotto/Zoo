@@ -1,0 +1,67 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 11 de fev. de 2022, 10:51:26
+    Author     : pedro
+*/
+#menu{ 
+    margin-left: 0px;
+    padding: 0px;
+    list-style-type: none;  
+}
+
+h1{
+    font-family: Arial;
+    font-size: 20pt;
+    font-style: italic;
+    color: blue   
+}
+
+h2{
+    text-align: left;
+    font-family: Verdana;
+    font-size: 12pt;
+    font-weight: bold;
+    color: red;
+    text-decoration:underline;
+}
+
+#principal{
+    margin-left:50px;
+}
+#menu ul.item_menu li {
+    padding: 0px;
+    display: inline-block;
+}
+
+#menu ul.item_menu
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+#container{
+    display: flex;
+    margin: auto;
+}
+
+input{
+    padding-top: 0px;
+}
+
+#quadro{
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
+  background-color: yellow;
+  border: 4px solid greenyellow;
+  
+  
+}
+
+#negociopradentro{
+    margin-left: 0px;
+    padding: 0px;
+}

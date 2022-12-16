@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+
+<html>
+    <head>
+        <link rel="stylesheet" href="estilos.css" type="text/css"/>
+        <title>Formulário de Animais</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script language="javascript">
+            function validarFormulario() {
+                var c = document.getElementById('classe');
+                var p = document.getElementById('peso');
+                var i = document.getElementById('idade');
+                var e = document.getElementById('especie');
+                
+                if (c.value == '') {
+                    alert('O campo classe é obrigatório');
+                    c.style = 'border-color: red;';
+                    return false;
+                }
+                
+                if (p.value == '' ||  p.value < 1 || p.value > 102 || isNaN(p.value) == true) {
+                    alert('O campo peso é obrigatório e deve entre 1 e 102');
+                    p.style = 'border-color: red;'
+                    return false;
+                }
+                
+                if (i.value == '' ||  isNaN(i.value) == true ||  i.value < 0) {
+                    alert('O campo idade é obrigatório, deve ser numérico e positivo');
+                    i.style = 'border-color: red;'
+                    return false;
+                }
+                
+                if(e.value == '') {
+                    alert('O campo especie é obrigatório');
+                    e.style = 'border-color: red;'
+                    return false;
+                }
+                return true;
+            }          
+        </script>
+    </head>
+    <body>
+       <div id="principal">          
+            <h1>Formulário de Animais</h1>
+            <hr>                           
+            <div id="quadro">
+                <div id="negociopradentro">
+                    <form action="ConsultarAniamis" method="post" onsubmit="return validarFormulario()">
+                        <h2>Espécie:</h2>
+                        <input type="text" name="especie" id="especie" size="40">
+                        <h2>Classe</h2>
+                        <select name="classe" id="classe">
+                            <option value="">--- Selecione um modelo ---</option>
+                            <option value="MAMIFERO">Mamífero</option>
+                            <option value="REPTIL">Réptil</option>
+                            <option value="AVES">Ave</option>
+                            <option value="PEIXES">Peixe</option>
+                        </select>
+                        <h2>Peso:</h2>
+                        <input type="text" name="peso" id="peso" size="5">                       
+                        <h2>Idade:</h2>
+                        <input type="text" name="idade" id="idade" size="5">
+                        <br><br>
+                        <input type="submit" value="Salvar Informações">
+                        <input type="reset" value="Limpar">
+                        
+                    </form>    
+                </div>    
+            </div>                         
+        </div>   
+    </body>
+</html>
